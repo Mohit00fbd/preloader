@@ -1,0 +1,82 @@
+#loader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+		    -ms-transform: rotate(0deg);
+		     -o-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		   -moz-transform: rotate(360deg);
+		    -ms-transform: rotate(360deg);
+		     -o-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+
+}
+#loader {
+	display: block;
+	position: relative;
+	left:50%;
+	top:50%;
+	width:150px;
+	height: 150px;
+	border-color: transparent;
+	border-top-color: #3498db;
+	border-style: solid;
+	border-radius: 50%;
+	border-width: 3px;
+	margin-top: -75px;
+	margin-left: -75px;
+	z-index: 1500;
+	animation-name: spin;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#loader:before {
+	content: " ";
+	position: absolute;
+	border-style: solid;
+	border-color: transparent;
+	border-top-color: #e74c3c;
+	border-width: 3px;
+	border-radius: 50%;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#loader:after {
+	content: " ";
+	position: absolute;
+	border-width: 3px;
+	border-style: solid;
+	border-color: transparent;
+	border-top-color: #f9c922;
+	border-radius: 50%;
+	top: 15px;
+	left: 15px;
+	bottom: 15px;
+	right: 15px;
+	animation-name: spin;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
